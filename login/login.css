@@ -1,6 +1,7 @@
 :root {
     --color-back: #FBF6E6;
     --color-header: #397F4E;
+    --dark-header: #2e633e;
 }
 
 * {
@@ -34,7 +35,7 @@ body, ul {
 }
 
 .header img {
-    margin: 0 63px;
+    margin-left: 63px;
     width: 102px;
 }
 
@@ -43,7 +44,7 @@ body, ul {
 }
 
 .box-login {
-    padding: 10px;
+    padding: 8px 10px;
     border: 2px solid #fff;
     border-radius: 10px;
     margin-right: 83px;
