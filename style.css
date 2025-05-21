@@ -50,6 +50,7 @@ body, ul {
     border-radius: 10px;
     margin-right: 83px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .box-login a {
@@ -62,9 +63,7 @@ body, ul {
 
 .box-login:hover {
     background-color: #306941;
-    transition: 0.5s;
 }
-
 
 /* content */
 
@@ -140,6 +139,7 @@ body, ul {
     border-radius: 15px;
     display: inline-block;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .saiba-mais a {
@@ -153,7 +153,6 @@ body, ul {
 
 .saiba-mais:hover {
     background-color: var(--dark-header);
-    transition: 0.5s;
 }
 
 .text-below-banner {
@@ -233,6 +232,7 @@ body, ul {
     display: inline-block;
     border-radius: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .keep-reading1 a {
@@ -242,7 +242,6 @@ body, ul {
 
 .keep-reading1:hover {
     background-color: var(--dark-header);
-    transition: 0.5s;
 }
 
 .p-ref1 {
@@ -303,6 +302,7 @@ body, ul {
     display: inline-block;
     border-radius: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .keep-reading2 a {
@@ -312,7 +312,6 @@ body, ul {
 
 .keep-reading2:hover {
     background-color: var(--dark-header);
-    transition: 0.5s;
 }
 
 .p-ref2 {
@@ -373,6 +372,7 @@ body, ul {
     display: inline-block;
     border-radius: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .keep-reading3 a {
@@ -382,7 +382,6 @@ body, ul {
 
 .keep-reading3:hover {
     background-color: var(--dark-header);
-    transition: 0.5s;
 }
 
 .p-ref3 {
@@ -443,6 +442,7 @@ body, ul {
     display: inline-block;
     border-radius: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .keep-reading4 a {
@@ -452,7 +452,6 @@ body, ul {
 
 .keep-reading4:hover {
     background-color: var(--dark-header);
-    transition: 0.5s;
 }
 
 .p-ref4 {
@@ -513,6 +512,7 @@ body, ul {
     display: inline-block;
     border-radius: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .keep-reading5 a {
@@ -522,7 +522,6 @@ body, ul {
 
 .keep-reading5:hover {
     background-color: var(--dark-header);
-    transition: 0.5s;
 }
 
 .p-ref5 {
