@@ -8,10 +8,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--color-back);
+    overflow-x: hidden;
 }
 
 body, ul {
@@ -27,28 +29,36 @@ body, ul {
     font-weight: 800;
     background-color: var(--color-header);
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
     color: #fff;
     text-align: center;
     box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.32);
     height: 116px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.header img {
-    margin-left: 63px;
-    width: 102px;
+.header
+.logo-desktop {
+    width: 100%;
+    max-width: 102px;
+}
+
+.logo-mobile {
+    display: none;
 }
 
 .header h1 {
     font-size: 48px;
+    display: block;
+    user-select: none;
 }
 
 .box-login {
     padding: 8px 10px;
     border: 2px solid #fff;
     border-radius: 10px;
-    margin-right: 83px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -69,11 +79,16 @@ body, ul {
 
 .content {
     align-items: center;
+    padding: 78px 72px 0 71px;
+}
+
+.content img {
+    pointer-events: none;
+    user-select: none;
 }
 
 .banner {
-    margin: 78px 72px 0 71px;
-    width: 1777px;
+    max-width: 1777px;
     height: 964px;
     border-radius: 51px;
     background-color: #000;
@@ -81,9 +96,23 @@ body, ul {
 }
 
 .banner-campo {
-    width: 1777px;
-    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 51px;
     opacity: 0.72;
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 51px;
+    z-index: 0;
 }
 
 .banner-texto {
@@ -98,16 +127,6 @@ body, ul {
     font-size: 64px;
     font-family: "Abhaya Libre", serif;
     font-weight: 800;
-}
-
-.banner-texto p {
-    font-family: "inter", sans-serif;
-    font-size: 28px;
-    font-weight: 350;
-    margin-top: 156px;
-    margin-bottom: 156px;
-    margin-right: 998px;
-    letter-spacing: 1px;
 }
 
 .menu {
@@ -133,6 +152,16 @@ body, ul {
     justify-content: space-between;
 }
 
+.banner-texto p {
+    font-family: "inter", sans-serif;
+    font-size: 28px;
+    font-weight: 350;
+    padding: 156px 0;
+    max-width: 630px;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
 .saiba-mais {
     padding: 25px 94px;
     background-color: var(--color-header);
@@ -140,6 +169,7 @@ body, ul {
     display: inline-block;
     cursor: pointer;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 .saiba-mais a {
@@ -156,7 +186,7 @@ body, ul {
 }
 
 .text-below-banner {
-    margin-top: 9px;
+    padding-top: 9px;
     text-align: center;
 }
 
@@ -170,12 +200,18 @@ body, ul {
     color: #000;
 }
 
+.linha {
+    align-items: center;
+    padding: 48px;
+}
+
 .hr1 {
-    width: 1202px;
-    margin: 48px auto;
+    width: 100%;
+    max-width: 1202px;
     background-color: #000;
     height: 1px;
     border: 0;
+    margin: 0 auto;
 }
 
 .campo-cidade {
@@ -233,6 +269,7 @@ body, ul {
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 .keep-reading1 a {
@@ -303,6 +340,7 @@ body, ul {
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 .keep-reading2 a {
@@ -373,6 +411,7 @@ body, ul {
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 .keep-reading3 a {
@@ -443,6 +482,7 @@ body, ul {
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 .keep-reading4 a {
@@ -513,6 +553,7 @@ body, ul {
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 .keep-reading5 a {
@@ -617,7 +658,8 @@ footer {
     color: #000;
 }
 
-.telefone, .email {
+.telefone,
+.email {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 10px;
@@ -645,7 +687,138 @@ footer {
 
 .contato {
     display: flex;
-  flex-direction: row-reverse;
-  gap: 1rem;
-  flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+
+/*        */
+/* Mobile */
+/*        */
+
+
+
+@media (max-width: 768px) {
+    /* header */
+    .header {
+        height: 84px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header h1,
+    .logo-desktop,
+    .box-login {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: inline;
+    }
+
+    /* content */
+
+    .banner-texto {
+        text-align: center;
+        align-items: center;
+    }
+
+    .banner-texto h1 {
+        text-align: center;
+    }
+
+    .banner-texto p {
+        font-family: "inter", sans-serif;
+        font-size: 28px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .saiba-mais {
+        padding: 25px 94px;
+        background-color: var(--color-header);
+        border-radius: 15px;
+        display: inline-block;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        user-select: none;
+    }
+
+    .saiba-mais a {
+        font-family: "inter", sans-serif;
+        font-size: 28px;
+        font-weight: 350;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .saiba-mais:hover {
+        background-color: var(--dark-header);
+    }
+
+    .text-below-banner {
+        margin-top: 9px;
+        text-align: center;
+    }
+
+    .text-below-banner p {
+        font-family: "inter", sans-serif;
+        font-size: 12px;
+    }
+
+    .text-below-banner a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    .hr1 {
+        width: 1202px;
+        margin: 48px auto;
+        background-color: #000;
+        height: 1px;
+        border: 0;
+    }
+
+    .campo-cidade {
+        text-align: center;
+    }
+
+    .campo-cidade h1 {
+        font-family: "Abhaya Libre", serif;
+        font-size: 64px;
+        color: var(--black-substitute);
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding-left: 29px;
+        padding-right: 30px;
+    }
+
+    .banner-texto p {
+        padding-top: 40px   ;
+        padding-right: 14px;
+        padding-left: 14px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .banner-texto {
+        left: 24px;
+        right: 24px;
+    }
+
+    .banner-texto h1 {
+        font-size: 32px;
+        text-align: center;
+    }
 }
